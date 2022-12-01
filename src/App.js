@@ -28,8 +28,9 @@ function CountriesApi() {
       {
         // countries.map(country => console.log(country.name.common))
        
-        countries.man(country => <Country name={country.name.common}
-        population={country.name.population}></Country>)
+        countries.map(country => <Country name={country.name.common}
+        population={country.population} flag={country.flags.png}></Country>)
+        
       }
     </div>
   )
@@ -37,9 +38,10 @@ function CountriesApi() {
 
 function Country(props) {
   return (
-    <div>
+    <div className='country'>
       <h2>Name: {props.name}</h2> 
       <h4>population: {props.population}</h4>
+      <img src='{props.flag}'></img>
     </div>
   )
 }
