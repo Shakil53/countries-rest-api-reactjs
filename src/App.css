@@ -38,7 +38,16 @@
 }
 
 .country{
-  border: 2px solid rgb(0, 0, 0);
-  background-color: #7ba1fa;
+  border: 2px solid rgb(102, 255, 252);
+  border-radius: 5px;
+  background-color: #7393df;
   color: rgb(237, 255, 255);
+}
+.country-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+.country img{
+  width: 150px;
 }

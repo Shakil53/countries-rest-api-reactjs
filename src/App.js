@@ -25,13 +25,15 @@ function CountriesApi() {
     <div>
       <h1>All Countries Around The World</h1>
       <h4>Countries:{countries.length}</h4>
-      {
+      <div className='country-container'>
+        {
         // countries.map(country => console.log(country.name.common))
        
         countries.map(country => <Country name={country.name.common}
         population={country.population} flag={country.flags.png}></Country>)
         
-      }
+        }
+      </div>
     </div>
   )
 }
@@ -39,9 +41,10 @@ function CountriesApi() {
 function Country(props) {
   return (
     <div className='country'>
-      <h2>Name: {props.name}</h2> 
+      <h2>{props.name}</h2> 
       <h4>population: {props.population}</h4>
-      <img src='{props.flag}'></img>
+      <img src={props.flag}></img>
+      
     </div>
   )
 }
